@@ -4,6 +4,10 @@ using Microsoft.EntityFrameworkCore;
 
 public class MoneyBotDbContext : DbContext
 {
+    public MoneyBotDbContext(DbContextOptions<MoneyBotDbContext> options) : base(options)
+    {
+    }
+
     public DbSet<ApplicationUser> ApplicationUsers { get; set; }
     public DbSet<Category> Categories { get; set; }
     public DbSet<Transaction> Transactions { get; set; }
