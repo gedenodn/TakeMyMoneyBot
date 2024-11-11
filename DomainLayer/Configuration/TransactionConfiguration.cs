@@ -17,7 +17,7 @@ namespace DomainLayer.Configuration
               .OnDelete(DeleteBehavior.Cascade);
 
             builder.HasOne(t => t.Category)
-               .WithMany()
+               .WithMany(t => t.Transactions)
                .HasForeignKey(t => t.CategoryId)
                .OnDelete(DeleteBehavior.Restrict);
 

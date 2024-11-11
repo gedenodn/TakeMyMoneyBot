@@ -22,6 +22,9 @@ namespace DomainLayer.Configuration
             builder.Property(u => u.CreatedDate)
               .IsRequired();
 
+            builder.HasMany(c => c.Categories)
+                .WithMany(c => c.Users);
+
             builder.HasMany(u => u.Transactions)
               .WithOne(t => t.ApplicationUser)
               .HasForeignKey(t => t.UserId)

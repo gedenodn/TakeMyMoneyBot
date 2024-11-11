@@ -14,6 +14,14 @@ namespace DomainLayer.Configuration
             builder.Property(c => c.CategoryName)
              .IsRequired()
              .HasMaxLength(100);
+
+            builder.HasMany(c => c.Users)
+                .WithMany(c => c.Categories);
+
+            builder.HasMany(c => c.Transactions)
+                .WithOne(c => c.Category)
+                .HasForeignKey(c => c.TransactionId);
+        
         }
     }
 }
