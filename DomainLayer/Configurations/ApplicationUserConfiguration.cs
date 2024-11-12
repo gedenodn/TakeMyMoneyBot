@@ -12,20 +12,23 @@ namespace DomainLayer.Configuration
             builder.HasKey(u => u.UserId);
 
             builder.Property(u => u.TelegramUserId)
-               .IsRequired()
-               .HasMaxLength(50);
+                   .IsRequired()
+                   .HasMaxLength(50);
 
             builder.Property(u => u.UserName)
-              .IsRequired()
-              .HasMaxLength(100);
+                   .IsRequired()
+                   .HasMaxLength(100);
 
             builder.Property(u => u.CreatedDate)
-              .IsRequired();
+                   .IsRequired();
+
+            builder.HasMany(c => c.Categories)
+                   .WithMany(c => c.Users);
 
             builder.HasMany(u => u.Transactions)
-              .WithOne(t => t.ApplicationUser)
-              .HasForeignKey(t => t.UserId)
-              .OnDelete(DeleteBehavior.Cascade);
+                   .WithOne(t => t.ApplicationUser)
+                   .HasForeignKey(t => t.UserId)
+                   .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }
