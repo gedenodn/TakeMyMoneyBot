@@ -12,21 +12,21 @@ namespace DomainLayer.Configuration
             builder.HasKey(t => t.TransactionId);
 
             builder.HasOne(t => t.ApplicationUser)
-              .WithMany(u => u.Transactions)
-              .HasForeignKey(t => t.UserId)
-              .OnDelete(DeleteBehavior.Cascade);
+                   .WithMany(u => u.Transactions)
+                   .HasForeignKey(t => t.UserId)
+                   .OnDelete(DeleteBehavior.Cascade);
 
             builder.HasOne(t => t.Category)
-               .WithMany(t => t.Transactions)
-               .HasForeignKey(t => t.CategoryId)
-               .OnDelete(DeleteBehavior.Restrict);
+                   .WithMany(t => t.Transactions)
+                   .HasForeignKey(t => t.CategoryId)
+                   .OnDelete(DeleteBehavior.Restrict);
 
             builder.Property(t => t.Amount)
-               .IsRequired()
-               .HasPrecision(18, 2);
+                   .IsRequired()
+                   .HasPrecision(18, 2);
 
             builder.Property(t => t.TransactionDate)
-              .IsRequired();
+                   .IsRequired();
 
             builder.Property(t => t.Description)
                    .HasMaxLength(500);

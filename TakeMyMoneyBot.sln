@@ -5,7 +5,9 @@ VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TakeMyMoneyBot", "TakeMyMoneyBot.csproj", "{472559C4-F19C-49F4-96BA-D637666F8DBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainLayer", "DomainLayer\DomainLayer.csproj", "{9D35C481-70FE-455E-AAA5-D3B67B2FA43F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccsessLayer", "DomainLayer\DataAccsessLayer.csproj", "{9D35C481-70FE-455E-AAA5-D3B67B2FA43F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotLayer", "..\BotLayer\BotLayer.csproj", "{8CD5244D-9A15-4DEA-AD62-CABEC4201504}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{9D35C481-70FE-455E-AAA5-D3B67B2FA43F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D35C481-70FE-455E-AAA5-D3B67B2FA43F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D35C481-70FE-455E-AAA5-D3B67B2FA43F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CD5244D-9A15-4DEA-AD62-CABEC4201504}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CD5244D-9A15-4DEA-AD62-CABEC4201504}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CD5244D-9A15-4DEA-AD62-CABEC4201504}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CD5244D-9A15-4DEA-AD62-CABEC4201504}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

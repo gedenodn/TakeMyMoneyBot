@@ -30,7 +30,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="DomainLayer\DomainLayer.csproj">
+    <ProjectReference Include="..\BotLayer\BotLayer.csproj" />
+    <ProjectReference Include="DomainLayer\DataAccsessLayer.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
   </ItemGroup>
